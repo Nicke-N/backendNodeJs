@@ -1,4 +1,3 @@
-const mainJs = require("../public/main.js")
 const mysql = require("mysql")
 const dbconfig = require("../config/database.js")
 const connection = mysql.createConnection(dbconfig.connection)

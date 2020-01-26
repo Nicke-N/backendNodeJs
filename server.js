@@ -5,6 +5,7 @@ const bodyParser = require("body-parser")
 const morgan = require("morgan")
 const app = express()
 const port = process.env.PORT || 3000;
+const ip = process.env.IP || "localhost";
 const path = require("path")
 const passport = require("passport")
 const flash = require("connect-flash")
@@ -31,5 +32,7 @@ app.use(flash())
 
 require("./app/routes.js")(app, passport)
 
-app.listen(port)
-console.log("port: " + port)
+app.listen(port, ip, () => {
+    console.log("port: " + port)
+})
+
