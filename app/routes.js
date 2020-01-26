@@ -3,7 +3,7 @@ const dbconfig = require("../config/database.js")
 const connection = mysql.createConnection(dbconfig.connection)
 
 
-connection.query("USE mydb;")
+connection.query("USE heroku_2f68d20d0d6441b;")
 
 module.exports = function (app, passport) {
     app.get("/addrestaurant", isLoggedIn, (req, res) => {

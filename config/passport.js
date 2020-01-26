@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt-nodejs")
 const dbconfig = require("./database.js")
 const connection = mysql.createConnection(dbconfig.connection)
 
-connection.query("USE mydb;")
+connection.query("USE heroku_2f68d20d0d6441b;")
 
 module.exports = function (passport) {
     passport.serializeUser((user, done) => {
